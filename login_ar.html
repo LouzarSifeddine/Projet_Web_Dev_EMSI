@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>مثال Bootstrap 5</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      background: #212529;
+      min-height: 100vh;
+      text-align: right;
+    }
+    
+    .login-container {
+      min-height: calc(100vh - 56px); /* طرح ارتفاع شريط التنقل */
+      display: flex;
+      align-items: center;
+    }
+    
+    form {
+      border-radius: 10px;
+      box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+      width: 90%;
+      background: #212529;
+    }
+    
+    .form-floating {
+      margin-top: 20px;
+    }
+    
+    .title_form {
+      margin-bottom: 2rem !important;
+      text-align: center;
+    }
+    
+    nav {
+      box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+      background: blue;
+      padding: 2px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    
+
+    
+    .nav-item {
+      margin: 5px;
+    }
+    
+    .form-floating > label::after {
+      background-color: transparent !important;
+    }
+    
+    /* تعديلات للغة العربية */
+    .form-floating > label {
+      right: 0;
+      left: auto;
+      transform-origin: right top;
+    }
+    
+    .form-floating > .form-control:focus ~ label,
+    .form-floating > .form-control:not(:placeholder-shown) ~ label {
+      transform: scale(.85) translateY(-0.5rem) translateX(-0.15rem);
+    }
+    
+    .dropdown-menu {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand navbar-light">
+  <div class="container-fluid">
+    <!-- العلامة التجارية/الشعار -->
+    <a class="navbar-brand" href="#" style="color: white">مشروعي</a>
+    
+    <!-- زر التبديل للجوال -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    </button>
+    
+    <!-- محتوى شريط التنقل -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- التنقل الأيسر -->
+      <span class="navbar-toggler-icon"></span>
+
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" style="color: white; display: none">الرئيسية</a>
+        </li>
+      </ul>
+      
+      <!-- التنقل الأيمن -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle px-4 py-1 mt-3" data-bs-toggle="dropdown">
+              اللغة
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">العربية</a></li>
+              <li><a class="dropdown-item" href="./login_fr.html">الفرنسية</a></li>
+              <li><a class="dropdown-item" href="./login_en.html">الإنجليزية</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link bg-success text-white px-4 py-2 rounded-3" href="#" style="color: white; display: none">تسجيل الدخول</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link bg-danger text-white px-2 py-1 mt-3 rounded-3" href="#" style="color: white; display: none">مساعدة</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<!-- جزء تسجيل الدخول -->
+<div class="login-container">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <h1 class="h3 mb-3 fw-normal title_form" style="color: white"><b>تسجيل الدخول</b></h1>
+          
+          <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="البريد الإلكتروني" style="background-color: #2d3038;border-color: #212529; color: white;">
+            <label for="floatingInput" style="color: white">البريد الإلكتروني</label>
+          </div>
+          
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="كلمة المرور" style="background-color: #2d3038;border-color: #212529; color: white">
+            <label for="floatingPassword" style="color: white">كلمة المرور</label>
+          </div>
+          
+          <div class="form-check text-start my-3">
+            <input class="form-check-input" type="checkbox" value="remember-me" id="checkDefault" style="background-color: #212529">
+            <label class="form-check-label" for="checkDefault" style="color: white">
+              تذكرني
+            </label>
+          </div>
+          
+          <button class="btn btn-primary w-100 py-2" type="submit">الدخول</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

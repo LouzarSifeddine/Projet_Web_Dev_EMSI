@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      background: #212529;
+      min-height: 100vh;
+    }
+    
+    .login-container {
+      min-height: calc(100vh - 56px); /* Subtract navbar height */
+      display: flex;
+      align-items: center;
+    }
+    
+    form {
+ 
+      border-radius: 10px;
+      box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+      width: 90%;
+	  background: #212529;
+    }
+    
+    .form-floating {
+      margin-top: 20px;
+	  
+    }
+    
+    .title_form {
+      margin-bottom: 2rem !important; /* Fixed your 500px margin */
+      text-align: center;
+    }
+	
+	nav {
+	
+	box-shadow: 20px 20px 20px 20px rgba(0,0,0,0.1);
+
+
+		}
+	.navbar-brand {
+		background: blue;
+		padding: 2px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.nav-item {
+		margin: 5px;
+	}
+	
+	.form-floating > label::after {
+    background-color: transparent !important;
+}
+	
+	
+	
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand navbar-light ">
+  <div class="container-fluid">
+    <!-- Brand/Logo -->
+    <a class="navbar-brand " href="#" style= "color: white">My project</a>
+    
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    </button>
+    
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Left Navigation -->      <span class="navbar-toggler-icon"></span>
+
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" style= "color: white; display: none">Home</a>
+        </li>
+ 
+      </ul>
+      
+      <!-- Right Navigation -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle px-4 py-1 mt-3  " data-bs-toggle="dropdown">
+              Language
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./login_ar.html">Arabic</a></li>
+              <li><a class="dropdown-item" href="./login_fr.html">French</a></li>
+              <li><a class="dropdown-item" href="#">English</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link bg-success text-white px-4 py-2 rounded-3" href="#"  style= "color: white;display: none">Connect</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link bg-danger text-white px-2 py-1 mt-3 rounded-3" href="#"  style= "color: white;display: none">Help</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<!-- CHANGE THIS PART - Added login-container -->
+<div class="login-container">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+      <h1 class="h3 mb-4 fw-normal title_form" style="color: #E8EAED; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 600; letter-spacing: -0.5px;">
+    <b>Sign in</b>
+</h1>
+          
+          <div class="form-floating" >
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" style= "background-color: #2d3038;border-color: #212529;color: white;">
+            <label for="floatingInput" style= "color: white">Email address</label>
+          </div>
+          
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" style= "background-color: #2d3038;border-color: #212529 ;color: white">
+            <label for="floatingPassword" style= "color: white">Password</label>
+          </div>
+          
+          <div class="form-check text-start my-3">
+            <input class="form-check-input" type="checkbox" value="remember-me" id="checkDefault" style= "background-color: #212529">
+            <label class="form-check-label" for="checkDefault" style= "color: white">
+              Remember me
+            </label>
+          </div>
+          
+          <button class="btn btn-primary w-100 py-2" type="submit">Connect</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
